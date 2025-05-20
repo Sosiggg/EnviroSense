@@ -1,7 +1,9 @@
 {
-  "name": "web",
+  "name": "envirosense-web",
   "version": "0.1.0",
   "private": true,
+  "description": "Web dashboard for EnviroSense IoT monitoring system",
+  "author": "Salas - Team Lead & Fullstack Developer",
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
