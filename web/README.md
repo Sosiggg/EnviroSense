@@ -1,6 +1,31 @@
-# Getting Started with Create React App
+# EnviroSense Web Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based web dashboard for monitoring environmental sensor data from the EnviroSense IoT platform.
+
+## Features
+
+- Real-time sensor data visualization
+- Historical data analysis
+- User authentication and management
+- Responsive design for desktop and mobile
+- Integration with EnviroSense backend API
+
+## Technology Stack
+
+- React 19
+- Material UI 7
+- Chart.js for data visualization
+- Axios for API communication
+- JWT authentication
+
+## Deployment
+
+The EnviroSense web dashboard can be deployed to various hosting platforms:
+
+1. **Render**: Automatic deployment from GitHub repository
+2. **Vercel**: Zero-configuration deployment for React applications
+3. **Netlify**: Simple deployment with continuous integration
+4. **Docker**: Containerized deployment for scalability
 
 ## Available Scripts
 
