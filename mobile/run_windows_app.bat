@@ -1,5 +1,5 @@
 @echo off
-echo Setting up environment for Flutter Windows build...
+echo Setting up environment for Flutter Web build...
 
 :: Change to the project directory
 cd /d "%~dp0"
@@ -12,12 +12,12 @@ call flutter clean
 echo Getting dependencies...
 call flutter pub get
 
-:: Enable Windows desktop support
-echo Enabling Windows desktop support...
-call flutter config --enable-windows-desktop
+:: Enable web support
+echo Enabling web support...
+call flutter config --enable-web
 
-:: Build and run the Windows app
-echo Building and running Windows app...
-call flutter run -d windows --verbose
+:: Build and run the web app
+echo Building and running web app...
+call flutter run -d chrome
 
 pause
