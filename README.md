@@ -135,7 +135,7 @@ A responsive web application built with React that offers:
 
 ## Team
 
-- **Salas**: Team Lead & Backend Developer
+- **Salas**: Team Lead & Fullstack Developer
 - **Nacalaban**: Frontend Developer
 - **Paigna**: IoT Specialist
 - **Olandria**: Data Analyst
