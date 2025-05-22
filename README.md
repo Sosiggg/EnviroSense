@@ -125,6 +125,45 @@ A responsive web application built with React that offers:
    - Load the appropriate sketch from the EnviroSensors directory
    - Update WiFi credentials and authentication details
    - Upload to your ESP32 device
+  
+## API Endpoints
+
+### Authentication Endpoints
+
+- `POST /api/v1/auth/register` - Register a new user with username, email, and password
+- `POST /api/v1/auth/token` - Login and get JWT access token
+- `GET /api/v1/auth/me` - Get current authenticated user information
+- `POST /api/v1/auth/email-token` - Generate and send authentication token to user's email
+- `POST /api/v1/auth/forgot-password` - Initiate password reset process
+- `POST /api/v1/auth/reset-password` - Reset password using token
+- `PUT /api/v1/auth/change-password` - Change password for authenticated user
+
+### Sensor Data Endpoints
+
+- `WebSocket /api/v1/sensor/ws` - WebSocket endpoint for real-time sensor data
+  - Authentication options:
+    - Query parameter: `?token=your-jwt-token`
+    - Query parameter: `?email=your-email@example.com`
+  - Accepts JSON data with temperature, humidity, and obstacle status
+  - Supports ping/pong messages for connection health checks
+
+- `GET /api/v1/sensor/data` - Get paginated sensor data with optional filtering
+  - Query parameters:
+    - `start_date`: Filter data from this date (ISO format)
+    - `end_date`: Filter data until this date (ISO format)
+    - `page`: Page number for pagination (default: 1)
+    - `page_size`: Number of records per page (default: 10)
+
+- `GET /api/v1/sensor/data/latest` - Get the latest sensor reading for the authenticated user
+  - Returns the most recent temperature, humidity, and obstacle status
+
+- `GET /api/v1/sensor/data/check` - Check if user has any sensor data and return diagnostic information
+  - Returns count of records and date range of available data
+
+### Miscellaneous Endpoints
+
+- `GET /api/v1/hello/` - Simple health check endpoint that returns a greeting message
+
 
 ## Documentation
 
